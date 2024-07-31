@@ -1,0 +1,320 @@
+/.conda
+/.lr_find_*.ckpt
+/=0.11.0
+/__pycache__
+/all_russian_books.npy
+/generated_text.txt
+/lightning_logs
+/logo.txt
+/lr_finder.png
+/fine-web-edu-1T
+/tb_logs/GPT/version_*/checkpoints
+fine-web-edu-1T-tokenized/cache-0f5f38a0da5555bc.arrow
+fine-web-edu-1T-tokenized/cache-1b8109c4b78b1d65.arrow
+fine-web-edu-1T-tokenized/cache-1c8405331100c8ec.arrow
+fine-web-edu-1T-tokenized/cache-1cc75f55b7c696e5.arrow
+fine-web-edu-1T-tokenized/cache-2d0c51c75b3d82af.arrow
+fine-web-edu-1T-tokenized/cache-2d67675d4f3f6c55.arrow
+fine-web-edu-1T-tokenized/cache-2dd82c7833e9df27.arrow
+fine-web-edu-1T-tokenized/cache-3b2579feb8adb102.arrow
+fine-web-edu-1T-tokenized/cache-3de548ad19d97f31.arrow
+fine-web-edu-1T-tokenized/cache-4b86dd65ef3c0af3.arrow
+fine-web-edu-1T-tokenized/cache-4cb9f0a574980393.arrow
+fine-web-edu-1T-tokenized/cache-4d0ccfdd0a99307e.arrow
+fine-web-edu-1T-tokenized/cache-4d295e253e73195d.arrow
+fine-web-edu-1T-tokenized/cache-4dd65804145d38a2.arrow
+fine-web-edu-1T-tokenized/cache-4fe8097900d355f7.arrow
+fine-web-edu-1T-tokenized/cache-5a6588d602979b9d.arrow
+fine-web-edu-1T-tokenized/cache-5b42548477005620.arrow
+fine-web-edu-1T-tokenized/cache-5efa0df0ce098886.arrow
+fine-web-edu-1T-tokenized/cache-5fa5a81cdb06273c.arrow
+fine-web-edu-1T-tokenized/cache-6c27becd027bde2a.arrow
+fine-web-edu-1T-tokenized/cache-6c845a7703fcf8b6.arrow
+fine-web-edu-1T-tokenized/cache-6e523e9baa0602ad.arrow
+fine-web-edu-1T-tokenized/cache-7d76cdaa75b775b7.arrow
+fine-web-edu-1T-tokenized/cache-7ee582d7127dac94.arrow
+fine-web-edu-1T-tokenized/cache-7f4d2f46f815604b.arrow
+fine-web-edu-1T-tokenized/cache-7fcf1607881f28ce.arrow
+fine-web-edu-1T-tokenized/cache-7fcfd046f041093d.arrow
+fine-web-edu-1T-tokenized/cache-8a3ae6f4bdf427c3.arrow
+fine-web-edu-1T-tokenized/cache-9ea8eafefb2a9d5c.arrow
+fine-web-edu-1T-tokenized/cache-9fe7bee508516b08.arrow
+fine-web-edu-1T-tokenized/cache-10bdd3f40e12ecd3.arrow
+fine-web-edu-1T-tokenized/cache-11f898ce35e872ef.arrow
+fine-web-edu-1T-tokenized/cache-15cdd4b3bb857be1.arrow
+fine-web-edu-1T-tokenized/cache-17b8ffad77618b04.arrow
+fine-web-edu-1T-tokenized/cache-24d6c9cbe0092a29.arrow
+fine-web-edu-1T-tokenized/cache-40bb32baf06efad8.arrow
+fine-web-edu-1T-tokenized/cache-53d7c0c2d6129d3e.arrow
+fine-web-edu-1T-tokenized/cache-55e70377058e5207.arrow
+fine-web-edu-1T-tokenized/cache-61bcd33e168c92a8.arrow
+fine-web-edu-1T-tokenized/cache-63d19169aa4e5662.arrow
+fine-web-edu-1T-tokenized/cache-64dc4ca603651983.arrow
+fine-web-edu-1T-tokenized/cache-67eb10a7ceffd6b0.arrow
+fine-web-edu-1T-tokenized/cache-067ff36e84b630f9.arrow
+fine-web-edu-1T-tokenized/cache-68fc12475b2cada2.arrow
+fine-web-edu-1T-tokenized/cache-77b5e9a6d3a01fd7.arrow
+fine-web-edu-1T-tokenized/cache-95ee580b379618fb.arrow
+fine-web-edu-1T-tokenized/cache-206be85da3ed6cb9.arrow
+fine-web-edu-1T-tokenized/cache-231b87d060c26141.arrow
+fine-web-edu-1T-tokenized/cache-275c0740f1c2620c.arrow
+fine-web-edu-1T-tokenized/cache-361a1bd3065b950d.arrow
+fine-web-edu-1T-tokenized/cache-617d867cde05c667.arrow
+fine-web-edu-1T-tokenized/cache-0711e7a52b61538e.arrow
+fine-web-edu-1T-tokenized/cache-867b7d344058b755.arrow
+fine-web-edu-1T-tokenized/cache-871c81085269543e.arrow
+fine-web-edu-1T-tokenized/cache-897a98114a13ad75.arrow
+fine-web-edu-1T-tokenized/cache-988fb3261982e696.arrow
+fine-web-edu-1T-tokenized/cache-993fdc1a932f5ce1.arrow
+fine-web-edu-1T-tokenized/cache-1895b1ee59899b6e.arrow
+fine-web-edu-1T-tokenized/cache-3604ca31794f16bd.arrow
+fine-web-edu-1T-tokenized/cache-4025e52c95effc6b.arrow
+fine-web-edu-1T-tokenized/cache-5018af68c1c4c413.arrow
+fine-web-edu-1T-tokenized/cache-8268ab16085bf302.arrow
+fine-web-edu-1T-tokenized/cache-8366a7fffe7d4b29.arrow
+fine-web-edu-1T-tokenized/cache-14305c066d965dae.arrow
+fine-web-edu-1T-tokenized/cache-19232cb0c207577a.arrow
+fine-web-edu-1T-tokenized/cache-35116fead73df5a9.arrow
+fine-web-edu-1T-tokenized/cache-60427a79799c5f4f.arrow
+fine-web-edu-1T-tokenized/cache-66302aaf16b01241.arrow
+fine-web-edu-1T-tokenized/cache-88739b92508f45ae.arrow
+fine-web-edu-1T-tokenized/cache-97759e48522cab65.arrow
+fine-web-edu-1T-tokenized/cache-219449e3748f7e80.arrow
+fine-web-edu-1T-tokenized/cache-446708a98273dca7.arrow
+fine-web-edu-1T-tokenized/cache-571783c6ac34773d.arrow
+fine-web-edu-1T-tokenized/cache-820852c0318d765b.arrow
+fine-web-edu-1T-tokenized/cache-99054319abd16d84.arrow
+fine-web-edu-1T-tokenized/cache-a4ae4b27b07ae1ec.arrow
+fine-web-edu-1T-tokenized/cache-a5ed7a15f402b2ac.arrow
+fine-web-edu-1T-tokenized/cache-a9e004772c80bc3a.arrow
+fine-web-edu-1T-tokenized/cache-a35ffa3b0df30c66.arrow
+fine-web-edu-1T-tokenized/cache-a6581482dc756248.arrow
+fine-web-edu-1T-tokenized/cache-ae86679e8f6da5df.arrow
+fine-web-edu-1T-tokenized/cache-b73fcbba2723a731.arrow
+fine-web-edu-1T-tokenized/cache-bd028ebdb06dd96d.arrow
+fine-web-edu-1T-tokenized/cache-c9d7bef6c629bda7.arrow
+fine-web-edu-1T-tokenized/cache-c24373b0ec0f253c.arrow
+fine-web-edu-1T-tokenized/cache-c747108d7ae2aa48.arrow
+fine-web-edu-1T-tokenized/cache-c5143314798e86bf.arrow
+fine-web-edu-1T-tokenized/cache-c953378110474466.arrow
+fine-web-edu-1T-tokenized/cache-d0534be4fea74b0a.arrow
+fine-web-edu-1T-tokenized/cache-d7495c2987436c0f.arrow
+fine-web-edu-1T-tokenized/cache-dce9f368e48d0b04.arrow
+fine-web-edu-1T-tokenized/cache-e9c41192baa91b24.arrow
+fine-web-edu-1T-tokenized/cache-e68f12e090c78ac3.arrow
+fine-web-edu-1T-tokenized/cache-e72607451ff70102.arrow
+fine-web-edu-1T-tokenized/cache-eb66c834af0d3576.arrow
+fine-web-edu-1T-tokenized/cache-ec719a9fdab6b5e5.arrow
+fine-web-edu-1T-tokenized/cache-ed3a2b3fcfe4211a.arrow
+fine-web-edu-1T-tokenized/cache-ee66946068404d03.arrow
+fine-web-edu-1T-tokenized/cache-ef4096b3e1df1281.arrow
+fine-web-edu-1T-tokenized/cache-eff76f620b5392a2.arrow
+fine-web-edu-1T-tokenized/cache-f0f44c39dd185901.arrow
+fine-web-edu-1T-tokenized/cache-f8a2d4540586655f.arrow
+fine-web-edu-1T-tokenized/cache-f534afa690c0a67b.arrow
+fine-web-edu-1T-tokenized/cache-fb89d22e4e3f19fc.arrow
+fine-web-edu-1T-tokenized/cache-fdf642033e94e485.arrow
+fine-web-edu-1T-tokenized/cache-ffd25160fb2ef9e4.arrow
+fine-web-edu-1T-tokenized/cache-ffeaa766eee50a22.arrow
+fine-web-edu-1T-tokenized/data-00000-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00001-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00002-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00003-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00004-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00005-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00006-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00007-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00008-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00009-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00010-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00011-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00012-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00013-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00014-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00015-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00016-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00017-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00018-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00019-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00020-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00021-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00022-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00023-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00024-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00025-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00026-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00027-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00028-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00029-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00030-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00031-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00032-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00033-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00034-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00035-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00036-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00037-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00038-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00039-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00040-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00041-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00042-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00043-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00044-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00045-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00046-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00047-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00048-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00049-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00050-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00051-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00052-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00053-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00054-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00055-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00056-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00057-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00058-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00059-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00060-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00061-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00062-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00063-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00064-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00065-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00066-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00067-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00068-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00069-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00070-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00071-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00072-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00073-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00074-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00075-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00076-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00077-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00078-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00079-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00080-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00081-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00082-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00083-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00084-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00085-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00086-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00087-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00088-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00089-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00090-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00091-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00092-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00093-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00094-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00095-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00096-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00097-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00098-of-00100.arrow
+fine-web-edu-1T-tokenized/data-00099-of-00100.arrow
+fine-web-edu-1T-tokenized/dataset_info.json
+fine-web-edu-1T-tokenized/state.json
+tb_logs/GPT/GPT_WAR_AND_PEACE_FULL/events.out.tfevents.1721831892.pop-os.78457.0
+tb_logs/GPT/GPT_WAR_AND_PEACE_FULL/hparams.yaml
+tb_logs/GPT/GPT_WAR_AND_PEACE_FULL/Learning Rate_Learning Rate/events.out.tfevents.1721831907.pop-os.78457.2
+tb_logs/GPT/GPT_WAR_AND_PEACE_FULL/Loss_Train Loss/events.out.tfevents.1721831907.pop-os.78457.1
+tb_logs/GPT/GPT_WAR_AND_PEACE_FULL/Loss_Validation Loss/events.out.tfevents.1721831940.pop-os.78457.3
+tb_logs/GPT/version_1/events.out.tfevents.1721668685.pop-os.355782.0
+tb_logs/GPT/version_1/hparams.yaml
+tb_logs/GPT/version_1/Learning Rate_Learning Rate/events.out.tfevents.1721668685.pop-os.355782.2
+tb_logs/GPT/version_1/Loss_Train Loss/events.out.tfevents.1721668685.pop-os.355782.1
+tb_logs/GPT/version_1/Loss_Validation Loss/events.out.tfevents.1721668740.pop-os.355782.3
+tb_logs/GPT/version_10/events.out.tfevents.1722081531.pop-os.18246.0
+tb_logs/GPT/version_10/hparams.yaml
+tb_logs/GPT/version_10/Learning Rate_Learning Rate/events.out.tfevents.1722081577.pop-os.18246.2
+tb_logs/GPT/version_10/Loss_Train Loss/events.out.tfevents.1722081577.pop-os.18246.1
+tb_logs/GPT/version_11/events.out.tfevents.1722087119.pop-os.33104.0
+tb_logs/GPT/version_12/events.out.tfevents.1722087130.pop-os.33147.0
+tb_logs/GPT/version_13/events.out.tfevents.1722087333.pop-os.4593.0
+tb_logs/GPT/version_13/hparams.yaml
+tb_logs/GPT/version_13/Learning Rate_Learning Rate/events.out.tfevents.1722087380.pop-os.4593.2
+tb_logs/GPT/version_13/Loss_Train Loss/events.out.tfevents.1722087380.pop-os.4593.1
+tb_logs/GPT/version_13/Loss_Validation Loss/events.out.tfevents.1722090783.pop-os.4593.3
+tb_logs/GPT/version_14/events.out.tfevents.1722116837.pop-os.93889.0
+tb_logs/GPT/version_15/events.out.tfevents.1722116872.pop-os.94017.0
+tb_logs/GPT/version_15/hparams.yaml
+tb_logs/GPT/version_15/Learning Rate_Learning Rate/events.out.tfevents.1722116894.pop-os.94017.2
+tb_logs/GPT/version_15/Loss_Train Loss/events.out.tfevents.1722116894.pop-os.94017.1
+tb_logs/GPT/version_16/events.out.tfevents.1722157660.pop-os.8200.0
+tb_logs/GPT/version_17/events.out.tfevents.1722157753.pop-os.8601.0
+tb_logs/GPT/version_17/hparams.yaml
+tb_logs/GPT/version_17/Learning Rate_Learning Rate/events.out.tfevents.1722157780.pop-os.8601.2
+tb_logs/GPT/version_17/Loss_Train Loss/events.out.tfevents.1722157780.pop-os.8601.1
+tb_logs/GPT/version_18/events.out.tfevents.1722157969.pop-os.12332.0
+tb_logs/GPT/version_18/hparams.yaml
+tb_logs/GPT/version_18/Learning Rate_Learning Rate/events.out.tfevents.1722157973.pop-os.12332.2
+tb_logs/GPT/version_18/Loss_Train Loss/events.out.tfevents.1722157973.pop-os.12332.1
+tb_logs/GPT/version_19/events.out.tfevents.1722160062.pop-os.52026.0
+tb_logs/GPT/version_19/hparams.yaml
+tb_logs/GPT/version_19/Learning Rate_Learning Rate/events.out.tfevents.1722160077.pop-os.52026.2
+tb_logs/GPT/version_19/Loss_Train Loss/events.out.tfevents.1722160077.pop-os.52026.1
+tb_logs/GPT/version_2/events.out.tfevents.1721654386.pop-os.5902.0
+tb_logs/GPT/version_2/hparams.yaml
+tb_logs/GPT/version_2/Learning Rate_Learning Rate/events.out.tfevents.1721654388.pop-os.5902.3
+tb_logs/GPT/version_2/Loss_Train Loss/events.out.tfevents.1721654388.pop-os.5902.2
+tb_logs/GPT/version_2/Loss_Validation Loss/events.out.tfevents.1721654387.pop-os.5902.1
+tb_logs/GPT/version_20/events.out.tfevents.1722160117.pop-os.53795.0
+tb_logs/GPT/version_20/hparams.yaml
+tb_logs/GPT/version_20/Learning Rate_Learning Rate/events.out.tfevents.1722160128.pop-os.53795.2
+tb_logs/GPT/version_20/Loss_Train Loss/events.out.tfevents.1722160128.pop-os.53795.1
+tb_logs/GPT/version_20/Loss_Validation Loss/events.out.tfevents.1722163273.pop-os.53795.3
+tb_logs/GPT/version_21/events.out.tfevents.1722163397.pop-os.105780.0
+tb_logs/GPT/version_21/hparams.yaml
+tb_logs/GPT/version_21/Learning Rate_Learning Rate/events.out.tfevents.1722163414.pop-os.105780.2
+tb_logs/GPT/version_21/Loss_Train Loss/events.out.tfevents.1722163414.pop-os.105780.1
+tb_logs/GPT/version_21/Loss_Validation Loss/events.out.tfevents.1722166550.pop-os.105780.3
+tb_logs/GPT/version_22/events.out.tfevents.1722243960.pop-os.2047422.0
+tb_logs/GPT/version_22/hparams.yaml
+tb_logs/GPT/version_23/events.out.tfevents.1722244009.pop-os.2053889.0
+tb_logs/GPT/version_23/hparams.yaml
+tb_logs/GPT/version_23/Learning Rate_Learning Rate/events.out.tfevents.1722244022.pop-os.2053889.2
+tb_logs/GPT/version_23/Loss_Train Loss/events.out.tfevents.1722244022.pop-os.2053889.1
+tb_logs/GPT/version_24/events.out.tfevents.1722244594.pop-os.2136223.0
+tb_logs/GPT/version_25/events.out.tfevents.1722244783.pop-os.2162879.0
+tb_logs/GPT/version_26/events.out.tfevents.1722244851.pop-os.2172386.0
+tb_logs/GPT/version_26/hparams.yaml
+tb_logs/GPT/version_26/Learning Rate_Learning Rate/events.out.tfevents.1722244863.pop-os.2172386.2
+tb_logs/GPT/version_26/Loss_Train Loss/events.out.tfevents.1722244863.pop-os.2172386.1
+tb_logs/GPT/version_3/events.out.tfevents.1721723305.pop-os.45525.0
+tb_logs/GPT/version_3/hparams.yaml
+tb_logs/GPT/version_3/Learning Rate_Learning Rate/events.out.tfevents.1721723305.pop-os.45525.2
+tb_logs/GPT/version_3/Loss_Train Loss/events.out.tfevents.1721723305.pop-os.45525.1
+tb_logs/GPT/version_3/Loss_Validation Loss/events.out.tfevents.1721723395.pop-os.45525.3
+tb_logs/GPT/version_4/events.out.tfevents.1721594211.pop-os.276106.0
+tb_logs/GPT/version_4/hparams.yaml
+tb_logs/GPT/version_4/Learning Rate_Learning Rate/events.out.tfevents.1721594211.pop-os.276106.2
+tb_logs/GPT/version_4/Loss_Train Loss/events.out.tfevents.1721594211.pop-os.276106.1
+tb_logs/GPT/version_4/Loss_Validation Loss/events.out.tfevents.1721594360.pop-os.276106.3
+tb_logs/GPT/version_5/events.out.tfevents.1721736276.pop-os.192716.0
+tb_logs/GPT/version_5/hparams.yaml
+tb_logs/GPT/version_5/Learning Rate_Learning Rate/events.out.tfevents.1721736285.pop-os.192716.2
+tb_logs/GPT/version_5/Loss_Train Loss/events.out.tfevents.1721736285.pop-os.192716.1
+tb_logs/GPT/version_5/Loss_Validation Loss/events.out.tfevents.1721736648.pop-os.192716.3
+tb_logs/GPT/version_6/events.out.tfevents.1721738584.pop-os.212598.0
+tb_logs/GPT/version_6/hparams.yaml
+tb_logs/GPT/version_6/Learning Rate_Learning Rate/events.out.tfevents.1721738593.pop-os.212598.2
+tb_logs/GPT/version_6/Loss_Train Loss/events.out.tfevents.1721738593.pop-os.212598.1
+tb_logs/GPT/version_6/Loss_Validation Loss/events.out.tfevents.1721738921.pop-os.212598.3
+tb_logs/GPT/version_7/events.out.tfevents.1721751818.pop-os.299940.0
+tb_logs/GPT/version_7/hparams.yaml
+tb_logs/GPT/version_7/Learning Rate_Learning Rate/events.out.tfevents.1721751832.pop-os.299940.2
+tb_logs/GPT/version_7/Loss_Train Loss/events.out.tfevents.1721751832.pop-os.299940.1
+tb_logs/GPT/version_7/Loss_Validation Loss/events.out.tfevents.1721752151.pop-os.299940.3
+tb_logs/GPT/version_8/events.out.tfevents.1721994775.pop-os.363806.0
+tb_logs/GPT/version_8/hparams.yaml
+tb_logs/GPT/version_8/Learning Rate_Learning Rate/events.out.tfevents.1721994794.pop-os.363806.2
+tb_logs/GPT/version_8/Loss_Train Loss/events.out.tfevents.1721994794.pop-os.363806.1
+tb_logs/GPT/version_8/Loss_Validation Loss/events.out.tfevents.1721998116.pop-os.363806.3
+tb_logs/GPT/version_9/events.out.tfevents.1722074358.pop-os.10890.0
+tb_logs/GPT/version_9/hparams.yaml
+tb_logs/GPT/version_9/Learning Rate_Learning Rate/events.out.tfevents.1722074401.pop-os.10890.2
+tb_logs/GPT/version_9/Loss_Train Loss/events.out.tfevents.1722074401.pop-os.10890.1

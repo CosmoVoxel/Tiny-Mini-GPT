@@ -1,0 +1,23 @@
+{
+    "layers_d": 12,
+    "heads": 12,
+    "emb_d": 768,
+    "ff_d": 3072,
+    "max_seq_len": 1024,
+    "encoding_name": "r50k_base",
+    "vocab_size": 50304,
+    "att_drop": 0.15,
+    "ff_drop": 0.15,
+    "att_out_drop": 0.13,
+    "ff_out_drop": 0.13,
+    "out_drop": 0.1,
+    "chekpoints_dir": "./checkpoints/",
+    "dataset_name": "war_and_peace",
+    "num_workers": 11,
+    "shuffle_training": true,
+    "epochs": 20,
+    "batch_size": 6,
+    "grad_accum": 1,
+    "lr": 0.0006,
+    "valid_freq": 1
+}
