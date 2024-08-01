@@ -10,13 +10,15 @@ import torch.utils
 import torch.utils.data
 from model import Decoder,generate_tokens
 import numpy as np
-from my_dataset import *
 import argparse
 from config import load_config,DecoderConfig
 from datasets import load_from_disk
+from torchmetrics import Accuracy
+from grokfast import gradfilter_ma, gradfilter_ema
 
 
-#ARGPARSET 
+
+#ARGPARSET
 parser = argparse.ArgumentParser(description='Train GPT model')
 parser.add_argument('-d','--dataset', type=str, help='Dataset to train on [war_and_peace,russian,finewebedu]',default="war_and_peace")
 parser.add_argument('-l','--log', type=bool,action=argparse.BooleanOptionalAction, help='Enable Logging',default=False)
@@ -33,6 +35,7 @@ args = parser.parse_args()
 
 if args.config != "None":
     config = load_config(args.config)
+
 elif args.config == "None":
     config = DecoderConfig()
 
@@ -41,13 +44,12 @@ def load_asci_logo_from_file(file):
         return f.read()
 
 class WarAndPeaceDataModule(LightningDataModule):
-    def __init__(self,path = 'war_and_piece_untouched.npy',batch_size: int = config.batch_size):
+    def __init__(self,path = './working-with-text-dataset/datasets/war_and_piece.npy',batch_size: int = config.batch_size):
         super().__init__()
         self.path = path
         self.batch_size = batch_size
 
     def setup(self, stage: str):
-        # Assign train/val datasets for use in dataloaders
         if stage == 'fit' or stage is None:
             data = np.load(self.path,allow_pickle=True)
             data :np.ndarray = np.concatenate(data)
@@ -57,8 +59,8 @@ class WarAndPeaceDataModule(LightningDataModule):
                 data = data[:-(len(data) % config.max_seq_len)]
             data = data.view(-1, config.max_seq_len)
 
-            x = data[:, :-1]  # Input sequences
-            y = data[:, 1:]   # Target sequences, shifted by one token to the right
+            x = data[:, :-1]
+            y = data[:, 1:]
 
             dataset = torch.utils.data.TensorDataset(x, y)
 
@@ -71,14 +73,15 @@ class WarAndPeaceDataModule(LightningDataModule):
         return torch.utils.data.DataLoader(self.val_dataset, batch_size=self.batch_size,num_workers=config.num_workers)
 
 class RussianBooksDataModule(LightningDataModule):
-    def __init__(self,batch_size: int = config.batch_size):
+    def __init__(self,path = "./working-with-text-dataset/datasets/all_russian_books.npy",batch_size: int = config.batch_size):
         super().__init__()
         self.batch_size = batch_size
+        self.path = path
 
     def setup(self, stage: str):
         # Assign train/val datasets for use in dataloaders
         if stage == 'fit' or stage is None:
-            data = np.load("all_russian_books.npy",allow_pickle=True)#[0].astype(np.uint32)
+            data = np.load(self.path,allow_pickle=True)#[0].astype(np.uint32)
             data = np.concatenate(data)
             tar_size = int(input("Select target number of tokens(-1 = ALL): "))
             if tar_size != -1:
@@ -140,7 +143,7 @@ class FineWebEduDataModule(LightningDataModule):
 
     def setup(self, stage: str):
         if stage == 'fit' or stage is None:
-            data = load_from_disk("./fine-web-edu-1T-tokenized").train_test_split(test_size=0.1,train_size=0.9)
+            data = load_from_disk("./working-with-text-dataset/datasets/fine-web-edu-1T-tokenized").train_test_split(test_size=0.1,train_size=0.9)
 
             train_data, val_data = data['train'], data['test']
 
@@ -157,7 +160,7 @@ if args.dataset == "war_and_peace":
     config.encoding_name = 'r50k_base'
     config.dataset_name = "war_and_peace"
     config.change_encoding()
-    datamodule = WarAndPeaceDataModule("war_and_piece_untouched.npy")
+    datamodule = WarAndPeaceDataModule("./working-with-text-dataset/datasets/war_and_piece.npy")
 
 elif args.dataset == "russian":
     config.encoding_name = 'cl100k_base'
@@ -182,6 +185,8 @@ class GPT(LightningModule):
         self.learning_rate = config.lr
         self.save_hyperparameters(ignore=['model'])
         self.total_validation_steps = 0
+        self.val_loss = torch.tensor([])
+        self.grads = None
         
     def training_step(self, batch, batch_idx):
         tensorboard:SummaryWriter = self.logger.experiment
@@ -194,6 +199,10 @@ class GPT(LightningModule):
         loss = torch.nn.functional.cross_entropy(x.view(-1,self.config.vocab_size),y.view(-1))
         tensorboard.add_scalars("Loss",{"Train Loss":loss},self.global_step) 
         tensorboard.add_scalars("Learning Rate",{"Learning Rate":self.lr_schedulers().get_last_lr()[0]},self.global_step)
+        tensorboard.add_scalars("Gradient Norm",{"Gradient Norm":torch.nn.utils.clip_grad_norm_(self.model.parameters(),1.0)},self.global_step)
+        train_accuracy = (torch.argmax(x,dim=-1) == y).float().mean()
+        tensorboard.add_scalars("Accuracy",{"Train Accuracy":train_accuracy},self.global_step)
+        self.log("train_accuracy",train_accuracy.item(),prog_bar=True,logger=False)
         self.log("train_loss",loss,prog_bar=True,logger=False)
         self.log("lr",self.lr_schedulers().get_last_lr()[0],prog_bar=True,logger=False)
         return loss
@@ -208,8 +217,13 @@ class GPT(LightningModule):
         x = self.model(x)
         y = y.long()
         loss = torch.nn.functional.cross_entropy(x.view(-1,self.config.vocab_size),y.view(-1))
-        tensorboard.add_scalars("Loss",{"Validation Loss":loss},self.total_validation_steps+(self.global_step - self.total_validation_steps)) 
-        self.log("val_loss",loss,prog_bar=True,logger=False)
+        self.val_loss = torch.cat((self.val_loss,loss.view(1).cpu()))
+        mean_val_loss = self.val_loss.mean().item()
+        val_accuracy = (torch.argmax(x,dim=-1) == y).float().mean()
+        tensorboard.add_scalars("Accuracy",{"Validation Accuracy":val_accuracy},self.global_step)
+        tensorboard.add_scalars("Loss",{"Validation Loss":mean_val_loss},self.global_step) 
+        self.log("val_loss",mean_val_loss,prog_bar=True,logger=False)
+        self.log("val_accuracy",val_accuracy.item(),prog_bar=True,logger=False)
 
     def on_validation_epoch_end(self):
         if args.log:
@@ -219,26 +233,31 @@ class GPT(LightningModule):
                 start_text = "В начале"
             text = generate_tokens(self.model,config=self.config,n_tokens=32,start_text=start_text)
             self.logger.experiment.add_text("Generated Text",text,self.current_epoch)
+        self.val_loss = torch.tensor([])
 
     def configure_optimizers(self):
         print("Configuring optimizers")
-        optimizer = torch.optim.AdamW(self.model.parameters(), self.learning_rate,betas=(0.9,0.95),weight_decay=0.1)
+        optimizer = torch.optim.AdamW(self.model.parameters(), self.learning_rate,betas=(0.9,0.95),weight_decay=5)
         lr_scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer,pct_start=0.1,max_lr=self.learning_rate,steps_per_epoch=int(len(datamodule.train_dataloader())*args.train_size),epochs=config.epochs,div_factor=10)
         return [optimizer], {"scheduler":lr_scheduler,
                              "interval":"step",
                              "frequency":1}
 
+    def backward(self,loss:torch.Tensor):
+        loss.backward()
+        grads = gradfilter_ema(self.model,grads=self.grads)
+
 model = GPT(config)
 
 if args.train:
-    if args.load_checkpoint:
+    if args.load_checkpoint != 'None':
         data = torch.load(args.load_checkpoint,weights_only=False)
         model = GPT(config)
         GPT.load_state_dict(model,data['state_dict']) 
         print(model)
 
     callbacks = []
-    print(load_asci_logo_from_file("logo.txt"))
+    print(load_asci_logo_from_file("logo/logo.txt"))
     if args.saving:
         checkpoints = ModelCheckpoint(
             filename="gpt_{epoch}_{step}",

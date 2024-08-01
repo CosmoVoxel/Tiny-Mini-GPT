@@ -6,9 +6,9 @@ from tiktoken import get_encoding
 
 @dataclass
 class DecoderConfig:
-    layers_d : int = 12
-    heads : int = 12
-    emb_d : int =  768
+    layers_d : int = 4
+    heads : int = 4
+    emb_d : int =  128
     ff_d : int =  emb_d*4
     max_seq_len : int = 1024
     # Encodings [cl100k_base,p50k_base,r50k_base]
@@ -18,7 +18,7 @@ class DecoderConfig:
 
  
     att_drop: float = 0.1
-    ff_drop: float = 0.13
+    ff_drop: float = 0.15
 
     att_out_drop: float = 0
     ff_out_drop: float = 0
@@ -27,7 +27,7 @@ class DecoderConfig:
 
     dataset_name:str = "war_and_peace"
     num_workers: int = 8
-    epochs: int = 50
+    epochs: int = 200
     batch_size: int = 6
     grad_accum: int = 1
     lr: float = 6e-4

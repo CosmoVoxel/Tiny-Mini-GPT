@@ -108,8 +108,6 @@ class Decoder(torch.nn.Module):
         self.norm1 = RMSNorm(config.emb_d)
         self.out = torch.nn.Linear(config.emb_d,config.vocab_size,bias=False)
 
-        self.we.weight = self.out.weight
-
     def forward(self,x:torch.Tensor):
         BATCH, SEQ_LEN = x.size()
         x = self.we(x)
@@ -135,67 +133,3 @@ def generate_tokens(model:Decoder,n_tokens = 128,config = DecoderConfig(),start_
         tokens = config.tokenizer.decode(tokens)
     model.train()
     return tokens
-
-
-# model = Decoder(DecoderConfig()).cuda()     
-# opt = torch.optim.AdamW(model.parameters())
-
-# testing = torch.randint(0,DecoderConfig.vocab_size,(4,1024)).cuda()
-# true_labels = torch.randint(0,DecoderConfig.vocab_size,(4,1024)).cuda()
-# def timed(fn):
-#     start = torch.cuda.Event(enable_timing=True)
-#     end = torch.cuda.Event(enable_timing=True)
-#     start.record()
-#     result = fn()
-#     end.record()
-#     torch.cuda.synchronize()
-#     return result, start.elapsed_time(end) / 1000
-
-
-# N_ITERS = 50
-
-# def training(model:Decoder,optimizer:torch.optim.AdamW):
-#     optimizer.zero_grad()
-#     with torch.autocast('cuda',dtype=torch.bfloat16):
-#         out : torch.Tensor = model(testing)
-#     loss :torch.Tensor= torch.nn.functional.cross_entropy(out.view(-1,DecoderConfig.vocab_size),true_labels.view(-1))
-#     loss.backward()
-#     optimizer.step()
-
-
-
-# eager_times = []
-# for i in range(N_ITERS):
-#     _, time = timed(lambda: training(model, opt))
-#     eager_times.append(time)
-#     print(f"eager eval time {i}: {time}")
-
-# print("~" * 10)
-
-# import torch._dynamo
-# torch._dynamo.reset()
-# torch.set_float32_matmul_precision('medium')
-# model = Decoder(DecoderConfig()).cuda()
-# model = torch.compile(model,fullgraph=True,mode='max-autotune')
-# opt = torch.optim.AdamW(model.parameters())
-
-
-# compile_times = []
-# for i in range(N_ITERS):
-#     _, time = timed(lambda: training(model, opt))
-#     compile_times.append(time)
-#     print(f"compile eval time {i}: {time}")
-
-# print("~" * 10)
-
-# import numpy as np
-# eager_med = np.median(eager_times)
-# compile_med = np.median(compile_times)
-# speedup = eager_med / compile_med
-# assert(speedup > 1)
-# print(f"(eval) eager median: {eager_med}, compile median: {compile_med}, speedup: {speedup:.2f}x")
-# print("~" * 10)
-
-
-
-
