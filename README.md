@@ -1,2 +1,2 @@
 # TODO: FILL IN README...
-Learning about full pipline to recreate GPT2.
+Exploring the full pipeline to recreate GPT2.
